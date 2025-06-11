@@ -1,0 +1,48 @@
+# Nombre del flujo de trabajo que aparecerá en la pestaña "Actions"
+name: Despliega
+
+# Define los eventos que activarán este flujo
+on:
+  # Se ejecuta cuando hay un push (commit) en la rama main
+  push:
+    branches:
+      - main
+  # También se ejecuta cuando se hace un pull request hacia la rama main
+  pull_request:
+    branches:
+      - main
+
+# Definición del trabajo (job) de despliegue
+jobs:
+  deploy:
+    # Define el sistema operativo que se usará para correr el flujo (Ubuntu)
+    runs-on: ubuntu-latest
+
+    # Lista de pasos que se ejecutarán en orden
+    steps:
+      # Paso 1: Clona el repositorio en la máquina de GitHub Actions
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Paso 2: Configura Node.js en la versión 18
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      # Paso 3: Instala todas las dependencias necesarias (usa package.json)
+      - name: Install dependencies
+        run: npm install
+
+      # Paso 4: Genera los archivos estáticos de producción (build)
+      - name: Build the app
+        run: npm run build
+
+      # Paso 5: Despliega el contenido del directorio `build` a la rama `gh-pages`
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # Usa el token de acceso secreto generado automáticamente por GitHub
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Especifica el directorio que contiene los archivos generados para producción
+          publish_dir: ./build
