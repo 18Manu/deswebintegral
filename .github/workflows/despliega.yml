@@ -6,11 +6,11 @@ on:
   # Se ejecuta cuando hay un push (commit) en la rama main
   push:
     branches:
-      - main
+      - Version1
   # También se ejecuta cuando se hace un pull request hacia la rama main
   pull_request:
     branches:
-      - main
+      - Version1
 
 # Definición del trabajo (job) de despliegue
 jobs:
