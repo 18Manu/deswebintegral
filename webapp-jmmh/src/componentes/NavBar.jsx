@@ -31,7 +31,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg shadow-sm" style={styles.navbar}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#" style={styles.brand}>
-          Manu MBoutique
+          Manu Boutique
         </a>
         <button
           className="navbar-toggler"
