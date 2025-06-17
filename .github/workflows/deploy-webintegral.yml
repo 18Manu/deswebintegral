@@ -19,13 +19,12 @@ jobs:
           node-version: '18'  # O la versión que uses
 
       - name: Instalar dependencias
+        working-directory: ./webapp-jmmh
         run: npm install
 
       - name: Construir proyecto
+        working-directory: ./webapp-jmmh
         run: npm run build
-
-      # Aquí podrías agregar pasos para desplegar, si tienes un host o FTP
-      # Por ejemplo, subir build a un servidor o hacer deploy a algún servicio
 
       - name: Confirmar éxito
         run: echo "Build y workflow completados en la rama webintegral"
