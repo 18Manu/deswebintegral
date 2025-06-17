@@ -35,7 +35,7 @@ function App() {
     <>
       <NavBar />
       <div className="container text-center" style={styles.container}>
-        <h2 style={styles.title}>Bienvenido a Manus Boutique</h2>
+        <h2 style={styles.title}>Bienvenido a Manu Boutique</h2>
         <hr className="my-4" />
         <p style={styles.subtitle}>
           Donde el estilo cobra vida con elegancia y personalidad.
