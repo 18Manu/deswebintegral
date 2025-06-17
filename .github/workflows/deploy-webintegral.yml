@@ -1,0 +1,31 @@
+name: CI para rama webintegral
+
+on:
+  push:
+    branches:
+      - webintegral
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checar código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # O la versión que uses
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Construir proyecto
+        run: npm run build
+
+      # Aquí podrías agregar pasos para desplegar, si tienes un host o FTP
+      # Por ejemplo, subir build a un servidor o hacer deploy a algún servicio
+
+      - name: Confirmar éxito
+        run: echo "Build y workflow completados en la rama webintegral"
