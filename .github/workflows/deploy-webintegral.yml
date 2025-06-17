@@ -3,7 +3,7 @@ name: CI para rama webintegral
 on:
   push:
     branches:
-      - webintegral
+      - version1
 
 jobs:
   build:
