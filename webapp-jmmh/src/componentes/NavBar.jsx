@@ -9,13 +9,21 @@ function Navbar() {
       color: '#b35c1e',
       fontWeight: 'bold',
       fontSize: '1.5rem',
+      background: 'none',
+      border: 'none',
     },
     link: {
       color: '#804000',
+      background: 'none',
+      border: 'none',
     },
     dropdownItem: {
       backgroundColor: '#fff8f0',
       color: '#804000',
+      background: 'none',
+      border: 'none',
+      width: '100%',
+      textAlign: 'left',
     },
     searchInput: {
       borderColor: '#d49a6a',
@@ -27,12 +35,16 @@ function Navbar() {
     },
   };
 
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <nav className="navbar navbar-expand-lg shadow-sm" style={styles.navbar}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#" style={styles.brand}>
+        <button className="navbar-brand" onClick={handleClick} style={styles.brand}>
           Manu Boutique
-        </a>
+        </button>
         <button
           className="navbar-toggler"
           type="button"
@@ -46,59 +58,57 @@ function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarContent">
-          {/* Menú de navegación */}
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#" style={styles.link}>Inicio</a>
+              <button className="nav-link" onClick={handleClick} style={styles.link}>Inicio</button>
             </li>
 
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={styles.link}>
+              <button className="nav-link dropdown-toggle" onClick={handleClick} data-bs-toggle="dropdown" aria-expanded="false" style={styles.link}>
                 Colección
-              </a>
+              </button>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Nueva temporada</a></li>
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Más vendidos</a></li>
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Exclusivos online</a></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Nueva temporada</button></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Más vendidos</button></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Exclusivos online</button></li>
               </ul>
             </li>
 
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={styles.link}>
+              <button className="nav-link dropdown-toggle" onClick={handleClick} data-bs-toggle="dropdown" aria-expanded="false" style={styles.link}>
                 Mujer
-              </a>
+              </button>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Ropa</a></li>
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Zapatos</a></li>
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Accesorios</a></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Ropa</button></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Zapatos</button></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Accesorios</button></li>
               </ul>
             </li>
 
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={styles.link}>
+              <button className="nav-link dropdown-toggle" onClick={handleClick} data-bs-toggle="dropdown" aria-expanded="false" style={styles.link}>
                 Hombre
-              </a>
+              </button>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Ropa</a></li>
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Zapatos</a></li>
-                <li><a className="dropdown-item" href="#" style={styles.dropdownItem}>Accesorios</a></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Ropa</button></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Zapatos</button></li>
+                <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Accesorios</button></li>
               </ul>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#" style={styles.link}>Ofertas</a>
+              <button className="nav-link" onClick={handleClick} style={styles.link}>Ofertas</button>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#" style={styles.link}>Nosotros</a>
+              <button className="nav-link" onClick={handleClick} style={styles.link}>Nosotros</button>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#" style={styles.link}>Contacto</a>
+              <button className="nav-link" onClick={handleClick} style={styles.link}>Contacto</button>
             </li>
           </ul>
 
-          {/* 🔍 Buscador a la derecha */}
           <form className="d-flex ms-auto" role="search">
             <input
               className="form-control me-2"
