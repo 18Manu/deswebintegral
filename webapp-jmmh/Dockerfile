@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expón el puerto 5000
-EXPOSE 5000
+EXPOSE 3000
 
 # Inicia React en el puerto 5000
 CMD ["npm", "start"]
