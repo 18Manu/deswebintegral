@@ -19,7 +19,7 @@ jobs:
           node-version: 16
 
       - name: Instalar dependencias
-        run: npm ci
+        run: npm install
 
       - name: Construir la app
         run: npm run build
