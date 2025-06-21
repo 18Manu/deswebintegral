@@ -38,7 +38,7 @@ function App() {
         <h2 style={styles.title}>Bienvenido a Manu Boutique</h2>
         <hr className="my-4" />
         <p style={styles.subtitle}>
-          Donde el estilo cobra vida con elegancia y personalidad25.
+          Donde el estilo cobra vida con elegancia y personalidad24.
         </p>
 
         {/* Botones de navegación destacados */}
