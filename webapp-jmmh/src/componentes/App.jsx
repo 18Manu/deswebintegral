@@ -95,7 +95,7 @@ function App() {
                       onMouseOut={e => (e.target.style.backgroundColor = '#b35c1e')}
                       onClick={() => alert(`Ver más de ${cat}`)}
                     >
-                      Ver más
+                      Ver más..
                     </button>
                   </div>
                 </div>
