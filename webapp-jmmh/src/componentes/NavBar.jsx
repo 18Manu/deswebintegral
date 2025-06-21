@@ -47,8 +47,6 @@ function Navbar() {
 
 
 
-
-          
         </button>
         <button
           className="navbar-toggler"
