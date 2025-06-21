@@ -90,6 +90,7 @@ function Navbar() {
             <li className="nav-item dropdown">
               <button className="nav-link dropdown-toggle" onClick={handleClick} data-bs-toggle="dropdown" aria-expanded="false" style={styles.link}>
                 Hombre
+                
               </button>
               <ul className="dropdown-menu">
                 <li><button className="dropdown-item" onClick={handleClick} style={styles.dropdownItem}>Ropa</button></li>
