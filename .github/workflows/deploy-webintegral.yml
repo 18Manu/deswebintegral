@@ -19,13 +19,15 @@ jobs:
           node-version: 16
 
       - name: Instalar dependencias
+        working-directory: ./webapp-jmmh
         run: npm install
 
       - name: Construir la app
+        working-directory: ./react-app
         run: npm run build
 
       - name: Publicar en GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./react-app/build
