@@ -44,6 +44,11 @@ function Navbar() {
       <div className="container-fluid">
         <button className="navbar-brand" onClick={handleClick} style={styles.brand}>
           Manu Boutique
+
+
+
+
+          
         </button>
         <button
           className="navbar-toggler"
