@@ -43,8 +43,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg shadow-sm" style={styles.navbar}>
       <div className="container-fluid">
         <button className="navbar-brand" onClick={handleClick} style={styles.brand}>
-          Manu Boutique
-
+          Manus Boutique
 
 
         </button>
