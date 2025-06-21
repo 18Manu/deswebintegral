@@ -58,14 +58,6 @@ function App() {
         </div>
 
         {/* Imagen principal */}
-        <div className="mt-5">
-          <img
-            src="https://i.ebayimg.com/images/g/ub4AAOSwiL1mzsGd/s-l225.jpg"
-            alt="Hombre con traje extravagante"
-            className="img-fluid rounded shadow"
-            style={{ maxHeight: '550px', maxWidth: '100%', objectFit: 'cover' }}
-          />
-        </div>
 
         {/* Banner de promoción */}
         <div className="mt-5 p-4 text-white" style={{ backgroundColor: '#b35c1e', borderRadius: '15px' }}>
